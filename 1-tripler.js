@@ -24,12 +24,12 @@ function tripler(array) {
         console.log("line 19🐯",  newArray)
         console.log(array)
     }
-    return array
+    return array;
 
 
 }
 
-console.log(tripler([1, 2, 3]))
+console.log(tripler([1, 2, 3]));
 
 // more practice had to use google to find this answer but took it apart to make it work for the way I
 // initially thought I had to do it while looping through it. 
@@ -42,9 +42,20 @@ function triple(array){
     let multiMapArray = array.map((num) =>{
         return num * 3;
     })
-    return multiMapArray
+    return multiMapArray;
 }
 
-console.log(triple([2,4, 6]))
+console.log(triple([2,4, 6]));
 
+let trippleThat = (array) =>{
+    // loop through array
+    for(let i = 0; i < array.length; i ++){
+        let mapAndMult = array.map((num) =>{
+            return num * 3;
+        });
+        return mapAndMult
+    }
+    return array
+}
 
+console.log(trippleThat([4, 1, 7]))
