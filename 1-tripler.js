@@ -59,3 +59,14 @@ let trippleThat = (array) =>{
 }
 
 console.log(trippleThat([4, 1, 7]))
+
+let multiplyByThree = (array) =>{
+    let mapIt = array.map((num) =>{
+        // console.log(num *3)
+        return num * 3
+    })
+    // console.log(mapIt)
+    return mapIt
+}
+
+console.log(multiplyByThree([8,8,8]))
