@@ -12,6 +12,10 @@ function tripler(array) {
     // loop through array
     for(let i = 0; i < array.length; i++){
         console.log(array[i])
+        array.forEach((num) =>{
+           let multiplyNum = num * 3   
+            console.log(multiplyNum)
+        })
     }
     // find a way to multiply each integer in the array by 3
     // maybe can use forEach or map and multiply 3 to each integer in the array
