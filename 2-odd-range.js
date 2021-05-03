@@ -18,17 +18,21 @@ function oddRange(end) {
         let evenNum = end % 2
 
         console.log(end)
-        newArray.push(evenNum)
-
         console.log(evenNum)
-        console.log(end)
+        if(evenNum === 1){
+            // newArray.push(evenNum)
+            console.log(newArray.push(end))
+        }else {
+            console.log("null")
+        }
+        // newArray.push(evenNum)
+
+        // console.log(evenNum)
+        // console.log(end)
     }
     console.log(newArray)
-    // if(evenNum){
-    //     console.log("even" + newArray)
-    // } else {
-    //     newArray.push(evenNum[newArray] +1)
-    //     console.log("odd",newArray)
-    // }
+   
 }
 oddRange(13);
+
+// console.log(1 % 2)
