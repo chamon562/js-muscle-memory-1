@@ -12,5 +12,14 @@ oddRange(6); // => [ 1, 3, 5 ]
 // use if conditional using the mod sign % because even numbers have no remainder
 // but if it does return the array that has a remainder 
 function oddRange(end) {
-
+    let newArray = [];
+    for (let i = 1; i <= end; i++) {
+        let end = i
+        newArray.push(end)
+        // return i;
+        console.log(end)
+    }
+    console.log(newArray)
 }
+oddRange(13);
+
