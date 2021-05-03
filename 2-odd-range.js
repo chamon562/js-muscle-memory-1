@@ -19,14 +19,14 @@ function oddRange(end) {
 
         console.log(end)
         console.log(evenNum)
-        if(evenNum === 1){
+        if (evenNum === 1) {
             // evenNum is the result of after end %2 
             // want the index so pushed end because that is now i
             // console.log(newArray.push(evenNum))
             // console.log(newArray.push(end))
             newArray.push(end)
-        }else {
-            console.log("null")
+        } else {
+            console.log("null", evenNum)
         }
         // newArray.push(evenNum)
 
@@ -34,8 +34,23 @@ function oddRange(end) {
         // console.log(end)
     }
     return newArray
-   
+
 }
 console.log(oddRange(13));
 console.log(oddRange(20))
 // console.log(1 % 2)
+
+let oddRanger = (end) => {
+    let array = [];
+    for (let i = 1; i <= end; i++) {
+        let end = i;
+        let endMod = end % 2;
+        if (endMod === 1) {
+            array.push(end)
+        }
+        // console.log(array)
+    }
+    return array
+}
+
+console.log(oddRanger(10))
