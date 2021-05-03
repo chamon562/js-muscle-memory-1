@@ -14,12 +14,21 @@ oddRange(6); // => [ 1, 3, 5 ]
 function oddRange(end) {
     let newArray = [];
     for (let i = 1; i <= end; i++) {
-        let end = i
-        newArray.push(end)
-        // return i;
+        let end = i;
+        let evenNum = end % 2
+
+        console.log(end)
+        newArray.push(evenNum)
+
+        console.log(evenNum)
         console.log(end)
     }
     console.log(newArray)
+    // if(evenNum){
+    //     console.log("even" + newArray)
+    // } else {
+    //     newArray.push(evenNum[newArray] +1)
+    //     console.log("odd",newArray)
+    // }
 }
 oddRange(13);
-
