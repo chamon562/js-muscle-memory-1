@@ -70,3 +70,15 @@ let multiplyByThree = (array) =>{
 }
 
 console.log(multiplyByThree([8,8,8]))
+
+let arrayMultiply = (array) => {
+    for(let i = 0; i < array.length; i ++){
+        let newNumbers = array.map((num) =>{
+            return num * 3
+        })
+        return newNumbers
+        // console.log(newNumbers)
+    }
+    return array
+}
+console.log(arrayMultiply([4, 4, 4]))
