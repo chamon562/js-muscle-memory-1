@@ -56,3 +56,14 @@ let primeNumber = (num) =>{
 }
 
 console.log(primeNumber(6))
+
+let primePrime = (num) =>{
+    for(let i = 2; i < num; i++){
+        if(num % 1 === 0){
+            return false
+        }
+    }
+    console.log(num > 1)
+}
+
+console.log(primePrime(9))
