@@ -46,11 +46,26 @@ let oddRanger = (end) => {
         let end = i;
         let endMod = end % 2;
         if (endMod === 1) {
-            array.push(end)
+            array.push(end);
         }
         // console.log(array)
     }
-    return array
+    return array;
 }
 
-console.log(oddRanger(10))
+console.log(oddRanger(10));
+
+function onlyOdd(end){
+    let newArray = [];
+    for(let i = 1; i <= end; i++){
+        let end = i;
+        let endMod = end % 2
+        if (endMod === 1){
+            newArray.push(end)
+        }
+
+    }
+    return newArray
+}
+
+console.log(onlyOdd(11))
