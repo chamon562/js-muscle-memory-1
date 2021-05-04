@@ -12,6 +12,14 @@ isPrime(2017); // => true
 ***************************************************************************/
 
 function isPrime(number) {
-
+    for(let i = 2; i < number; i++){
+        console.log(i)
+        if(number % i === 0){
+            return false
+        }
+    }
+    return number > 1
 }
 
+console.log(isPrime(4))
+console.log(isPrime(2))
