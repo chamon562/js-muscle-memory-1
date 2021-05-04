@@ -23,3 +23,14 @@ function isPrime(number) {
 
 console.log(isPrime(4))
 console.log(isPrime(2))
+
+function primeIt(num){
+    for(let i = 2; i < num; i++ ){
+        if(num % i  === 0){
+            return false
+        }
+    }
+    return num > 1
+}
+
+console.log(primeIt(5))
