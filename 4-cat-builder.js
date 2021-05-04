@@ -34,3 +34,16 @@ function dogBuilder(name, color, toy){
 
 const dog1 = dogBuilder("BobDog", "Cat Fish Grey", ["dog-bone", "digging-dirt"])
 console.log(dog1)
+
+const myFaveRapper = (name, brand, achievement) =>{
+    let rapper = {
+        name: name,
+        brand: brand,
+        achievement: achievement
+    }
+    return rapper
+}
+
+const greatRapper = myFaveRapper("Nipsey Hussle", "The Marathon Continues", ["uplifted his community", "Brought Bloods and Crip gang members together."]);
+
+console.log(greatRapper)
