@@ -70,3 +70,9 @@ const person2 = {name: "Barny", location: "Spider Town", age: 7}
 // console.log(getValue(person1, person2, "name"))
 console.log(getValue(person1, person2, "location"))
 // console.log(getValue(person1, person2, "age"))
+
+function valueObject(obj1, obj2, key){
+  // make a newArray equal to empty to have the specified value pushed in when later returned
+  let newArray = [];
+  // make variable for combined objects to better letter used in for in loop and grabbing its value
+}
