@@ -114,3 +114,18 @@ console.log(getTheValues(usCars, japanCars, "make"))
 console.log(getTheValues(usCars, japanCars, "model"))
 console.log(getTheValues(usCars, japanCars, "location"))
 
+let getThemValues = (car1, car2, key) =>{
+  let newArray = [];
+  let mainObj = [car1, car2];
+  for(key1 in mainObj){
+    if(key === "make"){
+      newArray.push(mainObj[key1].make);
+    } else if(key === "model"){
+      newArray.push(mainObj[key1].model)
+    }
+  }
+  return newArray;
+}
+
+console.log(getThemValues(usCars, japanCars, "make"))
+console.log(getThemValues(usCars, japanCars, "model"))
