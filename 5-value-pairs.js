@@ -92,3 +92,21 @@ function valueObject(obj1, obj2, key){
 
 console.log(valueObject(object1, object2, "name"))
 console.log(valueObject(object1, object2, "location"))
+
+const getTheValues = (car1, car2, key) =>{
+  let newArray = []
+  let bothObj = [car1, car2]
+  for(key1 in bothObj){
+    if(key === "name"){
+      newArray.push(bothObj[key1].name)
+    } else if( key === "location"){
+      newArray.push(bothObj[key1].location)
+
+    }
+  }
+  return newArray
+}
+const usCars={name: "Ford", location: "Texas"}
+const japanCars={name: "Honda", location: "Osaka"}
+console.log(getTheValues(usCars, japanCars, "name"))
+console.log(getTheValues(usCars, japanCars, "location"))
