@@ -21,7 +21,7 @@ function valuePair(obj1, obj2, key) {
       let objNames = newObject[key1].name
       if(key === "name"){
         console.log(objNames)
-        console.log("line 24 inside if statement",key)
+        // console.log("line 24 inside if statement",key)
         newArray.push(objNames)
       } else if(key === "location")
       newArray.push(objLocations)
@@ -32,30 +32,41 @@ function valuePair(obj1, obj2, key) {
       // } else{
       // }
     }
-    console.log(newArray)
+    return newArray
   // return newArray
 }
 const object1 = { name: 'One', location: 'Remote', age: 1 };
 const object2 = { name: 'Two', location: 'San Francisco' };
 // console.log("line 25", valuePair(object1, "location"))
 // valuePair(object1, object2, "name")
-valuePair(object1, object2, 'location')
+// console.log(valuePair(object1, object2, 'location'))
+console.log(valuePair(object1, object2, 'name'))
 
-// const object = { a: 1, b: 2, c: 3 };
+const getValue = (person1, person2, key) =>{
+  // first createa  new array to have new values pushed into to return
+  let newArray = [];
+  let allPersonObj = [person1, person2]
+  console.log(allPersonObj)
+  console.log(key)
+  for(key1 in allPersonObj){
+    let peopleNames = allPersonObj[key1].name
+    let peopleLocations = allPersonObj[key1].location
+    let peopleAge = allPersonObj[key1].age
+    console.log(peopleNames)
+    if(key === "name"){
+      newArray.push(peopleNames)
+    } else if(key === "location"){
+      newArray.push(peopleLocations)
+    } else if ( key === "age"){
+      newArray.push(peopleAge)
+    }
+  }
+  return newArray
+}
 
-// for (const property in object) {
-//   console.log(property, object[property]);
-// }
+const person1 = {name: "Jim", location: "Funky Town", age: 45}
+const person2 = {name: "Barny", location: "Spider Town", age: 7}
 
-// let obj = {
-//   key1: "value1",
-//   key2: "value2",
-//   key3: "value3"
-// }
-
-
-
-// // using for in - same output as above
-// for (let key in obj) {
-//   let value = obj[key];
-//   console.log(key, value);
+// console.log(getValue(person1, person2, "name"))
+console.log(getValue(person1, person2, "location"))
+// console.log(getValue(person1, person2, "age"))
