@@ -72,7 +72,15 @@ console.log(getValue(person1, person2, "location"))
 // console.log(getValue(person1, person2, "age"))
 
 function valueObject(obj1, obj2, key){
+  console.log(key)
   // make a newArray equal to empty to have the specified value pushed in when later returned
   let newArray = [];
   // make variable for combined objects to better letter used in for in loop and grabbing its value
+  let bothObj = [obj1, obj2]
+  // after having both obj use for in loop and use if statment for key to equal the third 
+  for (keyOne in bothObj){
+    console.log(bothObj[keyOne])
+  }
 }
+
+valueObject(object1, object2, "name")
