@@ -79,8 +79,13 @@ function valueObject(obj1, obj2, key){
   let bothObj = [obj1, obj2]
   // after having both obj use for in loop and use if statment for key to equal the third 
   for (keyOne in bothObj){
-    console.log(bothObj[keyOne])
+    console.log(bothObj[keyOne].name)
+    if(key === "name"){
+      newArray.push(bothObj[keyOne].name)
+    }
+    
   }
+  console.log(newArray)
 }
 
 valueObject(object1, object2, "name")
