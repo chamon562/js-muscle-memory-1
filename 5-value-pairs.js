@@ -82,10 +82,13 @@ function valueObject(obj1, obj2, key){
     console.log(bothObj[keyOne].name)
     if(key === "name"){
       newArray.push(bothObj[keyOne].name)
+    } else if (key === "location"){
+      newArray.push(bothObj[keyOne].location)
     }
     
   }
-  console.log(newArray)
+  return newArray
 }
 
-valueObject(object1, object2, "name")
+console.log(valueObject(object1, object2, "name"))
+console.log(valueObject(object1, object2, "location"))
