@@ -97,16 +97,20 @@ const getTheValues = (car1, car2, key) =>{
   let newArray = []
   let bothObj = [car1, car2]
   for(key1 in bothObj){
-    if(key === "name"){
-      newArray.push(bothObj[key1].name)
+    if(key === "make"){
+      newArray.push(bothObj[key1].make)
     } else if( key === "location"){
       newArray.push(bothObj[key1].location)
 
+    } else if(key === "model"){
+      newArray.push(bothObj[key1].model)
     }
   }
   return newArray
 }
-const usCars={name: "Ford", location: "Texas"}
-const japanCars={name: "Honda", location: "Osaka"}
-console.log(getTheValues(usCars, japanCars, "name"))
+const usCars={make: "Ford", model: "Explorer",location: "Texas"}
+const japanCars={make: "Honda", model: "Integra Type R", location: "Osaka"}
+console.log(getTheValues(usCars, japanCars, "make"))
+console.log(getTheValues(usCars, japanCars, "model"))
 console.log(getTheValues(usCars, japanCars, "location"))
+
