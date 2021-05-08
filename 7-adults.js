@@ -45,4 +45,19 @@ const ppl = [
   { name: 'Glass Beak', age: 7 },
 ];
 
-console.log(adults(ppl))
+// lets get the names of all those over age 18 
+
+let pplNames = (people) => {
+  let newFolks = []
+  for (keys in people) {
+    if (people[keys].age >= 18) {
+      newFolks.push(people[keys].name)
+      newFolks.push(people[keys].age)
+    }
+  }
+  return newFolks
+}
+
+// console.log(adults(ppl))
+
+console.log(pplNames(ppl))
