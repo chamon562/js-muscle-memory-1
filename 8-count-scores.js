@@ -30,8 +30,23 @@ const peeps = [
 ];
 countScores(peeps); //=> { Pete: 4, Mike: 4, Dexter: 6 }
 ***********************************************************************/
-
+const peeps = [
+  {name: "Pete", score: 2},
+  {name: "Dexter", score: 2},
+  {name: "Mike", score: 2},
+  {name: "Dexter", score: 2},
+  {name: "Mike", score: 2},
+  {name: "Pete", score: 2},
+  {name: "Dexter", score: 2}
+];
 
 function countScores(people) {
-
+  const newObj = {}
+  people.map((ppl) =>{
+  //  console.log(Object.values(ppl)) 
+    newObj[ppl.name] = ppl.score
+  })
+  return newObj
 }
+
+console.log(countScores(peeps))
