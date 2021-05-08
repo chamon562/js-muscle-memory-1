@@ -12,4 +12,19 @@ doesKeyExist(obj1, 'name'); // => false
 
 function doesKeyExist(obj, key) {
 
+    for (key1 in obj) {
+        // key1 gives me key name and obj[key1] gives me the value of the key
+        console.log(key1)
+        if (key === key1) {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }
+
+const obj1 = { company: 'General Assembly', course: 'Software Engineering Immersive' }
+console.log(doesKeyExist(obj1, 'company'));
+console.log(doesKeyExist(obj1, 'name'));
+
