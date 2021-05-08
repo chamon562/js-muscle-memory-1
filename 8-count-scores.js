@@ -30,6 +30,13 @@ const peeps = [
 ];
 countScores(peeps); //=> { Pete: 4, Mike: 4, Dexter: 6 }
 ***********************************************************************/
+
+const ppl = [ 
+  {name: "Pete", score: 10},
+  {name: "Mike", score : 10},
+  {name: "Pete", score: -8},
+  {name: "Dexter", score: 12}
+];
 const peeps = [
   {name: "Pete", score: 2},
   {name: "Dexter", score: 2},
@@ -40,12 +47,24 @@ const peeps = [
   {name: "Dexter", score: 2}
 ];
 
+// create a a total of each person score  and then put that into an object?
 function countScores(people) {
   const newObj = {}
-  people.map((ppl) =>{
-  //  console.log(Object.values(ppl)) 
-    newObj[ppl.name] = ppl.score
-  })
+  for(let i = 0; i < people.length; i++){
+    console.log(people[i])
+    console.log(people[i].name)
+    console.log(people[i].score)
+    if(people[i].name === "Dexter"){
+      console.log(people[i].score)
+    }
+  }
+  // people.forEach((ppl) =>{
+  // //  console.log(Object.values(ppl)) 
+  // // console.log(ppl.name)
+  // console.log(newObj[ppl.name] = ppl.score)
+  // // console.log(newObj[ppl.score] = ppl.name)
+  //   // console.log(newObj[ppl.name] = ppl.score)
+  // })
   return newObj
 }
 
