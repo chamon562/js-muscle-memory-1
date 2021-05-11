@@ -97,3 +97,17 @@ const mergeFruits = (fruits)=>{
 }
 
 console.log(mergeFruits(fruits))
+
+const peopleScore = (peoples) =>{
+  let objScore = {};
+  peoples.forEach((p)=>{
+    if(objScore[p.name]){
+      objScore[p.name] += p.score;
+    } else {
+      objScore[p.name] = p.score
+    }
+  })
+  return objScore
+}
+
+console.log(peopleScore(peeps))
